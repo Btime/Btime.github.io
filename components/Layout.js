@@ -1,6 +1,9 @@
 export default function Layout({ children }) {
   return (
     <>
+      <div className="header--btime">
+        <h1>Central de ajuda</h1>
+      </div>
       <div className="wrapper">{children}</div>
       <style jsx>{`
         .wrapper {
@@ -26,24 +29,28 @@ export default function Layout({ children }) {
 
         a {
           color: inherit;
-          text-decoration-color: var(--divider-color);
-          text-decoration-thickness: 2px;
-        }
-
-        a:hover {
-          color: var(--site-color);
-          text-decoration-color: currentcolor;
+          text-decoration: none;
         }
 
         h1,
         p {
-          margin-bottom: 1.5rem;
+          margin: 0;
         }
 
         code {
-          font-family: 'Menlo';
+          font-family: "Menlo";
+        }
+
+        .header--btime {
+          background-color: #9728fd;
+          color: #fff;
+          padding: 2.5rem;
+        }
+
+        ul {
+          list-style-type: none;
         }
       `}</style>
     </>
-  )
+  );
 }
